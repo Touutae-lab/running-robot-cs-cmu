@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Surveillance Robot</title>
+    <title>CMU Running Robot</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <style>
@@ -12,53 +12,73 @@
         width: 30%;
     }
 </style>
-
-<body>
-    <img src="http://192.168.1.104:8081/"
-        style="float:left; width:100%; max-width: 700px; max-height:600px; border-radius:10px"></img>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<body style="background-color: antiquewhite;">
+    <!-- <img src="http://192.168.1.104:8081/"
+        style="float:left; width:100%; max-width: 700px; max-height:600px; border-radius:10px"></img> -->
     <table style="float:right; width:100%; max-width: 400px; height:300px;">
         <tr style="text-align:center">
             <td>
-                <h2>Web Controlled Surveillance Robot</h2>
+                <h2>Running Robot</h2>
             <td>
         <tr>
         <tr>
             <td style="text-align: center">
-                <form action="/1" method="POST">
-                    <button id="FWD" class="robot">FORWARD</button>
+                <form action="/forward" method="POST">
+                    <button id="FWD" class="robot" >FORWARD</button>
                     </br>
                 </form>
             </td>
         <tr>
         <tr style="text-align: left">
             <td style="text-align: left">
-                <form action="/2" method="POST">
-                    <button id="LFT" class="robot">LEFT</button>
-                    </br>
-                </form>
-            </td>
-            <td style="text-align: left">
-                <form action="/4" method="POST">
-                    <button id="RGT" class="robot">RIGHT</button>
+                <form action="/left" method="POST">
+                    <button id="LFT" class="robot" >LEFT</button>
                     </br>
                 </form>
             </td>
             <td>
-                <form action="/3" method="POST">
-                    <button id="STP" class="robot">STOP</button>
+                <form action="/stop" method="POST">
+                    <button id="STP" class="robot" >STOP</button>
+                    </br>
+                </form>
+            </td>
+            <td style="text-align: left">
+                <form action="/right" method="POST">
+                    <button id="RGT" class="robot" >RIGHT</button>
                     </br>
                 </form>
             </td>
         <tr>
         <tr>
             <td style="text-align: center">
-                <form action="/5" method="POST">
-                    <button id="REV" class="robot">REVERSE</button>
+                <form action="/reverse" method="POST">
+                    <button id="REV" class="robot" >REVERSE</button>
                     </br>
                 </form>
             </td>
         </tr>
     </table>
+    <script>
+//         function formSubmit(e){
+//             e.preventDefault(); //This will prevent the default click action
+
+//             var frm = $('#'+ $(this).data('name') +'');
+
+//             $.ajax({
+//                 type: frm.attr('method'),
+//                 url: '(url)',
+//                 data: frm.serialize(),
+//                 success: function (data) {
+//                     console.log('Submission was successful.');
+//                 },
+//                 error: function (data) {
+//                     console.log('An error occurred.');
+
+//                 }
+//         });
+// }
+    </script>
 </body>
 
 </html>
